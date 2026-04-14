@@ -30,12 +30,12 @@ export default function App() {
                     <div className="h-px w-12 bg-zinc-800" />
 
                     <a
-                        href="https://github.com/martin0wong/personal-website"
+                        href="https://www.linkedin.com/in/martin0wong/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group flex items-center gap-2 text-zinc-500 hover:text-white transition-colors duration-300"
                     >
-                        <span className="text-xs font-mono tracking-widest uppercase">Head to GitHub for the time being...</span>
+                        <span className="text-xs font-mono tracking-widest uppercase">Check out my LinkedIn for the time being...</span>
                         <svg
                             viewBox="0 0 24 24"
                             width="16" height="16"
