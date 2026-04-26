@@ -20,7 +20,7 @@ export default function App() {
                     setShowTerminal(false);
                 }, 400);
             }
-        }, 20);
+        }, 50);
         return () => clearInterval(interval);
     }, []);
 
