@@ -20,7 +20,7 @@ export default function About({ isDark }: { isDark: boolean }) {
                 <div className="flex flex-col gap-2">
                     <span className="font-semibold uppercase tracking-[0.25em] text-[10px] md:text-xs text-zinc-500">about me</span>
                     <p className={`text-lg leading-relaxed ${isDark ? 'text-zinc-300' : 'text-zinc-600'}`}>
-                        still figuring out what I want to do after graduation... open to ideas
+                        still figuring out what I want to do in the future... open to ideas
                         <img
                             src={zazu}
                             alt="zazu"
