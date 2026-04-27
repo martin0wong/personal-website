@@ -11,7 +11,7 @@ import { ExternalLink } from "./components/UIHelpers";
 
 // Tab Components
 import AboutContent from "./components/about.tsx";
-// import ExperienceContent from "./components/";
+import ExperienceContent from "./components/experience.tsx";
 // import ProjectsContent from "./components/";
 import Todo from "./components/todo.tsx";
 
@@ -124,7 +124,7 @@ export default function App() {
                     ) : (
                         <motion.div key={activeTab} initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -10 }} transition={{ duration: 0.4 }}>
                             {activeTab === "About" && <AboutContent isDark={isDark} />}
-                            {activeTab === "Experience" && <Todo isDark={isDark} />}
+                            {activeTab === "Experience" && <ExperienceContent isDark={isDark} />}
                             {activeTab === "Projects" && <Todo isDark={isDark} />}
                         </motion.div>
                     )}
