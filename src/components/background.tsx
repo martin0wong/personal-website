@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import earthIcon from "../assets/earth.svg";
+// import earthIcon from "../assets/earth.svg";
 
 interface BackgroundProps {
     isDrawing: boolean;
