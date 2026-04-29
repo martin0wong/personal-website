@@ -90,8 +90,8 @@ export default function ExperienceContent({ isDark }: { isDark: boolean }) {
     });
 
     const treeX = useTransform(scrollYProgress,[0, 0.12], ["50%", "10%"]);
-    const treeScale = useTransform(scrollYProgress, [0, 0.12],[1.8, 0.4]);
-    const treeY = useTransform(scrollYProgress, [0, 0.12],["10vh", "0vh"]);
+    const treeScale = useTransform(scrollYProgress, [0, 0.12], [1, 0.3]);
+    const treeY = useTransform(scrollYProgress, [0, 0.12],["-10vh", "0vh"]);
     const treeOpacity = useTransform(scrollYProgress,[0, 0.8, 1], [1, 1, 0.4]);
 
     const lineOpacity = useTransform(scrollYProgress, [0.02, 0.08], [0, 1]);
@@ -105,7 +105,7 @@ export default function ExperienceContent({ isDark }: { isDark: boolean }) {
                     style={{ left: treeX, scale: treeScale, y: treeY, opacity: treeOpacity, x: "-50%" }}
                     className="absolute flex flex-col items-center pointer-events-none"
                 >
-                    <svg width="600" height="600" viewBox="0 0 200 200" className="overflow-visible">
+                    <svg viewBox="0 0 200 200" className="w-[120vw] max-w-[75vh] h-[120vw] max-h-[75vh] overflow-visible">
                         <RecursiveBranch x={100} y={190} angle={0} length={45} depth={0} />
                     </svg>
 
@@ -200,8 +200,10 @@ function TimelineCard({ exp, isDark }: { exp: Exp, isDark: boolean }) {
                     <ul className="mt-6 md:mt-8 space-y-3 text-left">
                         {exp.details.map((detail, i) => (
                             <li key={i} className="text-sm md:text-base text-zinc-400 font-light leading-relaxed flex gap-3 group">
-                                <span className="text-green-600 mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 opacity-80 shadow-[0_0_8px_rgba(34,197,94,0.4)]" />
-                                <span>{detail}</span>
+                                {/* BULLET POINTS DOTS */}
+                                <span className="mt-1.5 w-2 h-2 md:w-2.5 md:h-2.5 rounded-full flex-shrink-0 bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.8)]" />
+                                {/* BULLET POINTS TEXT */}
+                                <span className="group-hover:text-zinc-300 transition-colors duration-300">{detail}</span>
                             </li>
                         ))}
                     </ul>
